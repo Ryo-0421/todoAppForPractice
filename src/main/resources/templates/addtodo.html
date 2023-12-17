@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/addtodo.css}">
+  <!-- JS読込 -->
+<script th:src="@{/webjars/jquery/jquery.min.js}" defer></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
+<title>todo追加画面</title>
+</head>
+<body class="bg-light">
+<div class="text-center">
+	<h2><b>TodoAddForm</b></h2>
+	<form method="post" th:action="@{/add}" class="addtodo">
+		<div class="form-group">
+			<label for="title">タイトル</label>
+			<input type="text" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="timeLimit">期日</label>
+			<input type="date" class="form-control aaa">
+		</div>
+		<div class="form-group">
+		    <input type="radio" class="form-check-input">
+			<label for="isDone" class="form-check-label">完了フラグ</label>
+		</div>
+	</form>
+<button type="button" class="btn btn-primary">追加</button>
+</div>
+</body>
+</html>

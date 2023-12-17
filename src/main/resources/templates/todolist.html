@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/todolist.css}">
+  <!-- JS読込 -->
+<script th:src="@{/webjars/jquery/jquery.min.js}" defer></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
+<title>todoリスト</title>
+</head>
+<body class="bg-light text-center">
+	<h3><b>TodoList</b></h3>
+	<a href="@{/add}">Todo追加</a>
+	<h4>未完了リスト</h4>
+	<table class="table table-bordered table-style">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">タイトル</th>
+      <th scope="col">期日</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>ピアノ</td>
+      <td>2023-12-11</td>
+      <td>詳細</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>将棋</td>
+      <td>2023-12-28</td>
+      <td>詳細</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>プログラミング</td>
+      <td>2023-12-28</td>
+      <td>詳細</td>
+    </tr>
+  </tbody>
+</table>
+<h4>完了リスト</h4>
+<table class="table table-bordered table-style">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">タイトル</th>
+      <th scope="col">期日</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>ピアノ</td>
+      <td>2023-12-11</td>
+      <td>詳細</td>
+    </tr>
+  </tbody>
+</table>
+<button type="button" class="btn btn-primary">完了済みを削除</button>
+</body>
+</html>
