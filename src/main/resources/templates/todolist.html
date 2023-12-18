@@ -24,23 +24,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>ピアノ</td>
-      <td>2023-12-11</td>
-      <td>詳細</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>将棋</td>
-      <td>2023-12-28</td>
-      <td>詳細</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>プログラミング</td>
-      <td>2023-12-28</td>
-      <td>詳細</td>
+    <tr th:each="item: ${incompleteList}">
+      <th scope="row" th:text="${item.id}"></th>
+      <td th:text="${item.title}"></td>
+      <td th:text="${item.timeLimit}"></td>
+      <td >詳細</td>
     </tr>
   </tbody>
 </table>
@@ -55,11 +43,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>ピアノ</td>
-      <td>2023-12-11</td>
-      <td>詳細</td>
+    <tr th:each="item: ${CompleteList}">
+      <th scope="row" th:text="${item.id}"></th>
+      <td th:text="${item.title}"></td>
+      <td th:text="${item.timeLimit}"></td>
+      <td >詳細</td>
     </tr>
   </tbody>
 </table>
