@@ -16,4 +16,9 @@
 		where is_done = false
 	</select>
 	
+	<insert id="insertOneTodo">
+		insert into todo_details(title, is_done, time_limit)
+		values(#{title}, #{isDone}, #{timeLimit})
+	</insert>
+	
 </mapper>

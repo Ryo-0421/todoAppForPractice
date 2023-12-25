@@ -12,4 +12,6 @@ public interface TodoMapper {
 	public List<MTodo> getCompleteList();
 	
 	public List<MTodo> getIncompleteList();
+	
+	public void insertOneTodo(MTodo todo);
 }
