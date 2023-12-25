@@ -9,4 +9,6 @@ public interface TodoService {
 	 List<MTodo> findCompleteTodo();
 	 
 	 List<MTodo> findIncompleteTodo();
+	 
+	 void insertTodo(MTodo todo);
 }

@@ -27,4 +27,9 @@ public class TodoServiceImpl implements TodoService {
 	public List<MTodo> findIncompleteTodo() {
 		return this.todoMapper.getIncompleteList();
 	}
+	
+	@Override
+	public void insertTodo(MTodo todo) {
+		this.todoMapper.insertOneTodo(todo);
+	}
 }
