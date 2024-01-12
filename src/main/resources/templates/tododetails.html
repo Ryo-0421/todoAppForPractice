@@ -13,21 +13,24 @@
 <body class="bg-light">
 <div class="text-center">
 	<h3><b>TodoDetail</b></h3>
-	<form method="post" th:action="@{/detail}" class="tododetail">
+	<form method="post" th:action="@{/detail}" class="tododetail" th:object="${todoForm}">
+		<input type="hidden" th:field="*{id}">
 		<div class="form-group">
 			<label for="title">タイトル</label>
-			<input type="text" class="form-control">
+			<input type="text" class="form-control" th:field="*{title}" th:errorclass="is-invalid">
+			<div class="invalid-feedback" th:errors="*{title}"></div>
 		</div>
 		<div class="form-group">
 			<label for="timeLimit">期日</label>
-			<input type="date" class="form-control aaa">
+			<input type="date" class="form-control" th:field="*{timeLimit}" th:errorclass="is-invalid">
+			<div class="invalid-feedback" th:errors="*{timeLimit}"></div>
 		</div>
 		<div class="form-group">
-		    <input type="radio" class="form-check-input">
+		    <input type="checkbox" name="isDone" id="isDone" class="form-check-input" th:field="*{isDone}">
 			<label for="isDone" class="form-check-label">完了フラグ</label>
 		</div>
+		<button type="submit" class="btn btn-primary">更新</button>
 	</form>
-<button type="button" class="btn btn-primary">更新</button>
 </div>
 </body>
 </html>
