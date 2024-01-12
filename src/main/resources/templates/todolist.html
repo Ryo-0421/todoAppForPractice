@@ -28,7 +28,7 @@
       <th scope="row" th:text="${item.id}"></th>
       <td th:text="${item.title}"></td>
       <td th:text="${item.timeLimit}"></td>
-      <td >詳細</td>
+      <td><a class="btn btn-primary" th:href="@{'/detail/' + ${item.id}}">詳細</a></td>
     </tr>
   </tbody>
 </table>
@@ -47,7 +47,7 @@
       <th scope="row" th:text="${item.id}"></th>
       <td th:text="${item.title}"></td>
       <td th:text="${item.timeLimit}"></td>
-      <td >詳細</td>
+       <td><a class="btn btn-primary" th:href="@{'/detail/' + ${item.id}}">詳細</a></td>
     </tr>
   </tbody>
 </table>

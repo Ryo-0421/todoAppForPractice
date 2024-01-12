@@ -21,4 +21,16 @@
 		values(#{title}, #{isDone}, #{timeLimit})
 	</insert>
 	
+	<update id="updateOneTodo">
+		update todo_details
+		set title = #{title}, is_done = #{isDone}, time_limit = #{timeLimit}
+		where id = #{id}
+	</update>
+	
+	<select id="getOneTodo" resultType="com.example.domain.user.model.MTodo">
+		select *
+		from todo_details
+		where id = #{id}
+	</select>
+	
 </mapper>
